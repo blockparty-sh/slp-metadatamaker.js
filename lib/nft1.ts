@@ -65,11 +65,11 @@ export default {
 
     send: (
       tokenIdHex: string|Buffer,
-      slpAmounts: BN[]
+      slpAmount: BN
     ): Buffer => createOpReturnSend(
       0x41,
       tokenIdHex,
-      slpAmounts,
+      [slpAmount],
     ),
   }
 };

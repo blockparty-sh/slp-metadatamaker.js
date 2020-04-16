@@ -160,7 +160,7 @@ describe('SEND', () => {
   });
 
   it('OK: typical 1-output NFT1 Child SEND', () => {
-    const result = NFT1.Child.send('8'.repeat(64), [new BN(0x42)]).toString('hex');
+    const result = NFT1.Child.send('8'.repeat(64), new BN(0x42)).toString('hex');
     expect(result).to.equal('6a04534c500001410453454e44208888888888888888888888888888888888888888888888888888888888888888080000000000000042');
   });
 
@@ -170,7 +170,7 @@ describe('SEND', () => {
   });
 
   it('OK: typical SEND for token_type=41', () => {
-    const result = NFT1.Child.send('8'.repeat(64), [new BN(0x01)]).toString('hex');
+    const result = NFT1.Child.send('8'.repeat(64), new BN(0x01)).toString('hex');
     expect(result).to.equal('6a04534c500001410453454e44208888888888888888888888888888888888888888888888888888888888888888080000000000000001');
   });
 
